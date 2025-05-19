@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Color.fromRGBO(0, 133, 182, 1),
             fontFamily: 'Comfortaa',
             fontSize: 56,
-            fontWeight: FontWeight.w400
+            fontWeight: FontWeight.w300
           ),)
         )
       )
