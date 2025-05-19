@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextButton.styleFrom(
                 backgroundColor: Color.fromRGBO(103, 185, 62, 1)
               ),
-              onPressed: () {}, child: Text('Continuar'))
+              onPressed: () {}, child: Text('Bienestar UIS'))
           ],
         ),
       ),
