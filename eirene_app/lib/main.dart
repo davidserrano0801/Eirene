@@ -30,7 +30,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  Map<String, String> _loginData={
+    'emain': '',
+    'password': ''
+  };
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+  void _saveCredentials() {
+    setState(() {
+      _loginData = {
+        'email': _emailController.text,
+        'password': _passwordController.text
+      }
+    });
+  }
    @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 20),
             Image.asset('assets/imgs/logo_homepage.png'),
             TextFormField(
+              controller: _emailController,
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
@@ -58,12 +78,23 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             TextFormField(
+              controller: _passwordController,
               obscureText: true,
               decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
                 labelText: 'Contraseña'
               ),
-            )
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Color.fromRGBO(103, 185, 62, 1)
+              ),
+              onPressed: () {}, child: Text('Continuar')),
+            TextButton(
+                style: TextButton.styleFrom(
+                backgroundColor: Color.fromRGBO(103, 185, 62, 1)
+              ),
+              onPressed: () {}, child: Text('Bienestar UIS'))
           ],
         ),
       ),
