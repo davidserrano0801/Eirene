@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _loginData = {
         'email': _emailController.text,
         'password': _passwordController.text
-      }
+      };
     });
   }
    @override
