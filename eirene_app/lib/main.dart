@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'perfil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -94,7 +95,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextButton.styleFrom(
                 backgroundColor: Color.fromRGBO(103, 185, 62, 1)
               ),
-              onPressed: () {}, child: Text('Bienestar UIS'))
+              onPressed: () {}, child: Text('Bienestar UIS')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PerfilPage()),
+                  );
+                },
+                child: const Text('Ir a Perfil'),
+              )  
           ],
         ),
       ),
