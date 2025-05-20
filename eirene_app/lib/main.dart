@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'perfil.dart';
-
+import 'bienestar.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -57,7 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
       MaterialPageRoute(builder: (context) => const PerfilPage()),
     );
   }
-
+  void _goBienestar(){
+    Navigator.push(context,
+    MaterialPageRoute(builder: (context) => const BienestarPage()),);
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -186,7 +190,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextButton.styleFrom(
                   backgroundColor: Color.fromRGBO(103, 185, 62, 1),
                 ),
-                onPressed: _saveCredentials,
+                onPressed: _goBienestar,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
