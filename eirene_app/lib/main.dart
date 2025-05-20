@@ -50,6 +50,10 @@ class _MyHomePageState extends State<MyHomePage> {
         'password': _passwordController.text
       };
     });
+    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PerfilPage()),
+                  );
   }
    @override
   Widget build(BuildContext context) {
@@ -90,13 +94,13 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextButton.styleFrom(
                 backgroundColor: Color.fromRGBO(103, 185, 62, 1)
               ),
-              onPressed: () {}, child: Text('Continuar')),
+              onPressed: _saveCredentials, child: Text('Continuar')),
             TextButton(
                 style: TextButton.styleFrom(
                 backgroundColor: Color.fromRGBO(103, 185, 62, 1)
               ),
-              onPressed: () {}, child: Text('Bienestar UIS')),
-            ElevatedButton(
+              onPressed: _saveCredentials, child: Text('Bienestar UIS')),
+            TextButton(
                 onPressed: () {
                   Navigator.push(
                     context,
