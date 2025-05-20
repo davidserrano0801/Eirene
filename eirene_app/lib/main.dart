@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   Map<String, String> _loginData = {
-    'email': '',  // Corregido de 'emain' a 'email'
+    'email': '', 
     'password': ''
   };
 
